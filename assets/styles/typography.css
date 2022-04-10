@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "bridal";
+  src: url("../fonts/bridal.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Calligraph";
+  src: url("../fonts/Calligraph.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Eurof35";
+  src: url("../fonts/Eurof35.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Solena";
+  src: url("../fonts/Solena.woff") format("woff");
+  font-display: swap;
+}
+
+:root {
+  --clr-primary: #fff6ea;
+  --clr-secondary: #e1c2a2;
+  --clr-text: #634c32;
+  --clr-bg-light: #c8d3e9;
+  
+  color-scheme: light only;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(#ffffff, #ffffff); 
+  background-color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  background-image: linear-gradient(#ffffff, #ffffff); 
+  background-color: white;
+}

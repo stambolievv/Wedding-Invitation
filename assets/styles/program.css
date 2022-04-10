@@ -1,0 +1,115 @@
+#program {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  width: 100%;
+  max-width: 1460px;
+  margin: 0 auto;
+  padding: 48px 0;
+  
+  color: var(--clr-text);
+  text-align: center;
+}
+
+#program img.icon {
+  height: 150px;
+}
+
+#program h3 {
+  font-family: "Solena";
+  font-size: 2.5em;
+}
+
+#program h2 {
+  width: 100%;
+  margin: 0;
+
+  font-family: "Solena";
+  font-size: 4.5em;
+  font-weight: 500;
+}
+
+#program article {
+  width: 24%;
+  padding: 0 16px;
+
+  font-size: 1.5em;
+}
+
+#program .location {
+  position: relative;
+
+  padding: 12px 0;
+
+  font-family: "Eurof35";
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+#program .location::before {
+  content: "";
+  position: absolute;
+  display: block;
+
+  width: 40%;
+  height: 1px;
+  margin: 0 auto;
+  top: 0;
+  left: 30%;
+
+  background: var(--clr-bg-light);
+}
+
+#program .separator {
+  display: block;
+
+  height: 60px;
+  margin: 0 auto;
+}
+
+#program .map-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+
+  padding: 3.5rem 0 0.5rem;
+}
+
+#program .map-name{
+  color: var(--clr-text);
+}
+
+#program .description {
+  height: 100px;
+
+  font-family: "Eurof35";
+  font-weight: 700;
+}
+
+#program .map {
+  width: 100%;
+  height: 60vh;
+  margin: 24px 0;
+
+  border: none;
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1460px) {
+  #program article {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #program article {
+    width: 100%;
+    font-size: 1.3em;
+  }
+
+  #program .description {
+    height: 80px;
+  }
+}

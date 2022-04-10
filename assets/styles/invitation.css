@@ -1,0 +1,166 @@
+#invitation {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column;
+
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 20px;
+
+  background-image: url("../images/invitation-bg.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  font-family: "Eurof35";
+}
+
+#invitation nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  position: relative;
+
+  margin: 2rem 2rem 0;
+  padding: 0 2rem;
+  z-index: 1;
+}
+
+#invitation .menu {
+  display: flex;
+  list-style: none;
+}
+
+#invitation .menu li a {
+  padding: 0 1rem;
+  color: var(--clr-primary);
+  font-size: 2.5em;
+  font-weight: 900;
+  cursor: pointer;
+  border-left: solid 1px var(--clr-primary);
+  text-decoration: none;
+}
+
+#invitation .invitation-content {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column;
+
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 80%;
+  max-width: 1200px;
+  min-height: 90vh;
+  z-index: 1;
+}
+
+#invitation p {
+  position: relative;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 1.8rem;
+  z-index: 1;
+
+  color: var(--clr-primary);
+  font-size: 2.5em;
+  font-weight: 900;
+}
+
+#invitation .heading {
+  position: relative;
+
+  margin: 3rem 0 0;
+  padding: 2rem 0 0;
+
+  color: var(--clr-secondary);
+  font-family: "bridal";
+  font-weight: 900;
+  font-size: 4.5em;
+  line-height: 2em;
+}
+
+#invitation span.recipient {
+  position: relative;
+
+  margin: 3rem 0 0;
+  padding: 1rem 0 0;
+
+  color: var(--clr-secondary);
+  font-family: "Calligraph";
+  font-size: 1.5em;
+  line-height: 0.5;
+}
+
+#invitation input.recipient {
+  width: 0;
+  min-width: max(25%, 7rem);
+
+  height: 2rem;
+
+  background-color: #00000000;
+  color: var(--clr-secondary);
+  font-family: "Calligraph";
+  font-size: 1em;
+  text-align: center;
+
+  border: 2px solid var(--clr-primary);
+}
+
+#invitation input.recipient:focus {
+  outline: none;
+}
+
+#invitation .heading span {
+  color: var(--clr-primary);
+}
+
+@media only screen and (max-width: 900px) {
+  #invitation nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  #invitation .menu {
+    margin: 0.5rem 0.5rem 1.5rem;
+    padding-top: 2rem;
+  }
+
+  #invitation .menu li a {
+    margin-top: 1rem;
+
+    font-size: 1.5em;
+    border-right: solid 1px var(--clr-primary);
+  }
+
+  #invitation .invitation-content {
+    padding: 1rem;
+    width: 100%;
+    height: 10%;
+  }
+
+  #invitation p {
+    margin-bottom: 1.5rem;
+
+    font-size: 1.5em;
+  }
+
+  #invitation .heading {
+    padding: 0;
+
+    font-size: 3em;
+    font-weight: 800;
+    line-height: 2em;
+  }
+
+  #invitation span.recipient {
+    padding: 0;
+
+    font-size: 1.8em;
+    font-weight: 200;
+  }
+
+  #invitation input.recipient {
+    font-size: 1.5em;
+  }
+}
