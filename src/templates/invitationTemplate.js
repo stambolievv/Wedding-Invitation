@@ -29,40 +29,40 @@ export const invitation = (prop) => html`
     <section id="program">
       <h2>Програма</h2>
       <article>
-        <img src="/assets/images/church.png" alt="Венчавка" class="icon">
+        <img src="/assets/static/images/church.png" alt="Венчавка" class="icon">
         <h3>16:00 часа</h3>
         <p class="description">В нашия приказен ден първо пред Бог ще се вречем.</p>
         <p class="location">Храм „св. вмчца Марина“ гр. Пловдив</p>
       </article>
       <article>
-        <img src="/assets/images/rings.png" alt="Обет" class="icon">
+        <img src="/assets/static/images/rings.png" alt="Обет" class="icon">
         <h3>17:30 часа</h3>
         <p class="description">Малко по-късно от любов обзети ще разменим сватбените си обети.</p>
         <p class="location">Комплекс „Garden Weddings“ Индустриален Парк Марково</p>
       </article>
       <article>
-        <img src="/assets/images/cheers.png" alt="Питиета" class="icon">
+        <img src="/assets/static/images/cheers.png" alt="Питиета" class="icon">
         <h3>18:00 часа</h3>
         <p class="description">Следва, поздравленията ваши, да посрещнем с пълни чаши.</p>
         <p class="location">Комплекс „Garden Weddings“ Индустриален Парк Марково</p>
       </article>
       <article>
-        <img src="/assets/images/dinner.png" alt="Вечеря" class="icon">
+        <img src="/assets/static/images/dinner.png" alt="Вечеря" class="icon">
         <h3>19:00 часа</h3>
         <p class="description">И както си му е реда да продължим с веселба.</p>
         <p class="location">Комплекс „Garden Weddings“ Индустриален Парк Марково</p>
       </article>
       <div class="map-heading">
-        <img class="separator" src="/assets/images/border.png" alt="">
+        <img class="separator" src="/assets/static/images/border.png" alt="">
         <h3 class="map-name">Карта към Храм „св. вмчца Марина“</h3>
       </div>
       <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2958.190619599393!2d24.748221615669515!3d42.146207556571994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14acd1a4a8439773%3A0x11db87c6149d0015!2sSveta%20Marina%20church!5e0!3m2!1sen!2sbg!4v1649541185523!5m2!1sen!2sbg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="map-heading">
-        <img class="separator" src="/assets/images/border.png" alt="">
+        <img class="separator" src="/assets/static/images/border.png" alt="">
         <h3 class="map-name">Карта към Комплекс „Garden Weddings“</h3>
       </div>
       <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.6943839349246!2d24.72178401566825!3d42.09259715994216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14acd168ceffc02d%3A0x10a54e2eef61e9f0!2z0JjQvdC00YPRgdGC0YDQuNCw0LvQtdC9INC_0LDRgNC6INCc0LDRgNC60L7QstC-!5e0!3m2!1sen!2sbg!4v1649541292148!5m2!1sen!2sbg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <img class="separator" src="/assets/images/border.png" alt="">
+      <img class="separator" src="/assets/static/images/border.png" alt="">
     </section>
     <section id="contacts">
       <h2>Контакти</h2>
@@ -75,7 +75,7 @@ export const invitation = (prop) => html`
           </div>
           <div class="taxi-contacts"></div>
         </div>
-        <img class="separator" src="/assets/images/border-white.png" alt="">
+        <img class="separator" src="/assets/static/images/border-white.png" alt="">
         <div class="row">
           <div class="church">
             <h4><a href="http://www.plovdivskamitropolia.bg/hramove/143-mitropolitski-hram-qsv-vlmch-marinaq-gr-plovdiv.html">Храм „Света Великомъченица Марина“</a></h4>

@@ -16,11 +16,10 @@ const banner = `
 `.trim();
 const root = '.'; /* Project root directory (where index.html is located). */
 const outputFolder = 'dist'; /* Specify the output directory (relative to project root). */
-const assetFolder = 'assets'; /* Referenced in source code. They are hashed. */
-const publicFolder = `${assetFolder}/public`; /* Referenced in source code. They are not hashed. */
+const assetFolder = 'assets'; /* Specify the assets folder */
 const main = pkg.main || 'index.html'; /* Which file watcher to open. */
 const pluginSettings = {
-  viteStaticCopy: { targets: [{ src: publicFolder, dest: assetFolder }] },
+  viteStaticCopy: { targets: [{ src: `${assetFolder}/static`, dest: assetFolder }] },
   viteBanner: { outDir: outputFolder, content: banner },
   createHtmlPlugin: { minify: true, filename: `${main}` },
 };
@@ -48,11 +47,14 @@ export default defineConfig({
     rollupOptions: {
       output: {
         dir: outputFolder,
-        chunkFileNames: '[name]-[hash].js',
-        entryFileNames: '[name]-[hash].js',
+        chunkFileNames: '[name].js',
+        entryFileNames: '[name].js',
         assetFileNames: ({ name }) => {
-          if (/\.css$/.test(name ?? '')) return `${assetFolder}/styles/[name]-[hash][extname]`;
-          return '[name]-[hash][extname]';
+          if (/\.css$/.test(name)) return `${assetFolder}/styles/[name][extname]`;
+          if (/\.(woff2?|ttf|otf)$/.test(name)) return `${assetFolder}/fonts/[name][extname]`;
+          if (/\\favicon\\/.test(name)) return `${assetFolder}/static/images/favicon/[name][extname]`;
+          if (/\.(png|jpe?g|svg)$/.test(name)) return `${assetFolder}/static/images/[name][extname]`;
+          return '[name][extname]';
         }
       }
     }

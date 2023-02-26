@@ -10,7 +10,7 @@
     "build": "vite build && npm run imageCompression && npm run jsonCompression",
     "preview": "npm run build && vite preview",
     "format": "prettier --write ./src/**",
-    "imageCompression": "imagemin dist/assets/public/images/ --out-dir=dist/assets/public/images/",
+    "imageCompression": "imagemin dist/assets/static/images/* --out-dir=dist/assets/static/images",
     "jsonCompression": "minify-json dist/assets/public/json",
     "gh-deploy": "npm run gh-predeploy && gh-pages --dist=\"dist\" --branch=\"gh-pages\" --message=\"fix: deploy dist for github pages\"",
     "gh-predeploy": "git rev-parse --verify --quiet gh-pages || (git branch gh-pages && git push --set-upstream origin gh-pages)"
