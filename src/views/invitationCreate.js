@@ -1,6 +1,6 @@
 import page from 'page.js';
 import { html } from 'lit-html';
-import { createRecipient } from '../api/api';
+import { createRecipient } from '../api/services';
 import { invitation } from '../templates/invitationTemplate';
 
 /**
