@@ -12,8 +12,10 @@
     "format": "prettier --write ./src/**",
     "imageCompression": "imagemin dist/assets/images/* --out-dir=dist/assets/images",
     "jsonCompression": "minify-json dist/assets/json",
-    "gh-deploy": "npm run gh-predeploy && gh-pages --dist=\"dist\" --branch=\"gh-pages\" --message=\"fix: deploy dist for github pages\"",
-    "gh-predeploy": "git rev-parse --verify --quiet gh-pages || (git branch gh-pages && git push --set-upstream origin gh-pages)"
+    "gh-pages-deploy":"npm run gh-pages-build && npm run gh-pages-create && npm run gh-pages-publish",
+    "gh-pages-build": "set BRANCH=gh-pages&& npm run build && copy dist\\index.html dist\\404.html",
+    "gh-pages-create": "git rev-parse --verify --quiet gh-pages || (git branch gh-pages && git push --set-upstream origin gh-pages)",
+    "gh-pages-publish": "gh-pages --dist=dist --message=\"fix: deploy dist for github pages\""
   },
   "author": "Eleonora Atanasova & Deyan Stamboliev",
   "license": "Apache-2.0",

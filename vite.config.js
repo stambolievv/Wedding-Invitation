@@ -16,9 +16,10 @@ const banner = `
 `.trim();
 const outputFolder = 'dist'; /* Specify the output directory (relative to project root). */
 const assetsFolder = 'assets'; /* Specify the assets folder */
+const isForGithub = process.env.BRANCH === 'gh-pages';
 
 export default defineConfig({
-  base: '/',
+  base: isForGithub ? '/Wedding-Invitation/' : '/',
   assetsInclude: assetsFolder,
   server: {
     open: true,
