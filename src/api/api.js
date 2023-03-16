@@ -44,13 +44,13 @@ function createOption(method, data) {
     method,
     headers: {
       'X-Parse-Application-Id': import.meta.env.VITE_APPLICATION_ID,
-      'X-Parse-REST-API-Key': import.meta.env.VITE_REST_API_KEY
-    }
+      'X-Parse-REST-API-Key': import.meta.env.VITE_REST_API_KEY,
+    },
   };
 
   if (typeof data !== 'undefined') {
-    options.headers['Content-Type'] = 'application/json';
-    options.body = JSON.stringify(data);
+    Object.assign(options.headers, { 'Content-Type': 'application/json' });
+    Object.assign(options, { body: JSON.stringify(data) });
   }
 
   return options;

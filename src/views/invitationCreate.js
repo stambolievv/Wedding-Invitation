@@ -18,8 +18,10 @@ export function createInvitation(ctx) {
  * @param {KeyboardEvent} event - The "keydown" event.
  */
 async function onSubmit(event) {
-  if (event.key !== 'Enter') return;
+  const value = event.target instanceof HTMLInputElement ? event.target.value.trim() : undefined;
 
-  const { objectId } = await createRecipient(event.target.value);
+  if (event.key !== 'Enter' || !value) return;
+
+  const { objectId } = await createRecipient(value);
   return page.redirect(`/pokana/${objectId}`);
 }
