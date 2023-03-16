@@ -14,12 +14,12 @@ const banner = `
  * @license ${pkg.license}
  */
 `.trim();
-const outputFolder = 'dist'; /* Specify the output directory (relative to project root). */
-const assetsFolder = 'assets'; /* Specify the assets folder */
+const outputFolder = 'dist'; // Specify the output directory (relative to project root).
+const assetsFolder = 'assets'; // Specify the assets folder (relative to project root).
 const isForGithub = process.env.BRANCH === 'gh-pages';
 
 export default defineConfig({
-  base: isForGithub ? '/Wedding-Invitation/' : '/',
+  base: isForGithub ? '/Wedding-Invitation/' : '/', // The name of the Github repository
   assetsInclude: assetsFolder,
   server: {
     open: true,
