@@ -1,4 +1,4 @@
-import page from 'page.js';
+import page from 'page';
 import { decorateContext } from './middleware/context';
 
 import { createInvitation } from './views/invitationCreate';

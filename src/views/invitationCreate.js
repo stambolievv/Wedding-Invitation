@@ -1,4 +1,4 @@
-import page from 'page.js';
+import page from 'page';
 import { html } from 'lit-html';
 import { createRecipient } from '../api/services';
 import { invitation } from '../templates/invitationTemplate';
