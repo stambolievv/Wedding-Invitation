@@ -1,24 +1,24 @@
 @font-face {
   font-family: 'bridal';
-  src: url('../fonts/bridal.woff') format('woff');
+  src: url('/assets/fonts/bridal.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Calligraph';
-  src: url('../fonts/Calligraph.woff') format('woff');
+  src: url('/assets/fonts/Calligraph.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Eurof35';
-  src: url('../fonts/Eurof35.woff') format('woff');
+  src: url('/assets/fonts/Eurof35.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Solena';
-  src: url('../fonts/Solena.woff') format('woff');
+  src: url('/assets/fonts/Solena.woff') format('woff');
   font-display: swap;
 }
 

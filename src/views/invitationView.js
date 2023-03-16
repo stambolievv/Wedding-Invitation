@@ -7,8 +7,9 @@ import { invitation } from '../templates/invitationTemplate';
  * @param {PageJS.Context} ctx - The context object to use for rendering the details.
  */
 export async function viewInvitation(ctx) {
-  const recipient = await getRecipient(ctx.params.id);
-  const template = invitation(html`<span class="recipient">${recipient.name}</span>`);
+  const { baseUrl, params: { id } } = ctx;
+  const { name } = await getRecipient(id);
 
+  const template = invitation(html`<span class="recipient">${name}</span>`, baseUrl);
   ctx.render(template);
 }

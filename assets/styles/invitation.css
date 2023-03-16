@@ -7,7 +7,7 @@
   min-height: 100vh;
   padding: 0 20px;
 
-  background-image: url("../static/images/invitation-bg.png");
+  background-image: url("/assets/images/invitation-bg.png");
   background-size: cover;
   background-position: center;
   text-align: center;

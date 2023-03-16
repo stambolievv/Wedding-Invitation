@@ -8,8 +8,9 @@ import { invitation } from '../templates/invitationTemplate';
  * @param {PageJS.Context} ctx - The context object to use for rendering the form.
  */
 export function createInvitation(ctx) {
-  const template = invitation(html`<input @keydown=${onSubmit} class="recipient" type="text" name="recipient" />`);
+  const { baseUrl } = ctx;
 
+  const template = invitation(html`<input @keydown=${onSubmit} class="recipient" type="text" name="recipient" aria-label="recipient" />`, baseUrl);
   ctx.render(template);
 }
 
