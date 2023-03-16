@@ -11,7 +11,7 @@
   background-size: cover;
   background-position: center;
   text-align: center;
-  font-family: "Eurof35";
+  font-family: 'Eurof35', sans-serif, serif, monospace;
 }
 
 #invitation nav {
@@ -73,7 +73,7 @@
   padding: 2rem 0 0;
 
   color: var(--clr-secondary);
-  font-family: 'bridal';
+  font-family: 'bridal', sans-serif, serif, monospace;
   font-weight: 900;
   font-size: 4.5em;
   line-height: 2em;
@@ -86,7 +86,7 @@
   padding: 1rem 0 0;
 
   color: var(--clr-secondary);
-  font-family: "Calligraph";
+  font-family: 'Calligraph', sans-serif, serif, monospace;
   font-size: 1.5em;
   line-height: 0.5;
 }
@@ -99,7 +99,7 @@
 
   background-color: #00000000;
   color: var(--clr-secondary);
-  font-family: 'Calligraph';
+  font-family: 'Calligraph', sans-serif, serif, monospace;
   font-size: 1em;
   text-align: center;
 
