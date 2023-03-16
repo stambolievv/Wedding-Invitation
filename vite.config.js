@@ -14,54 +14,40 @@ const banner = `
  * @license ${pkg.license}
  */
 `.trim();
-const root = '.'; /* Project root directory (where index.html is located). */
 const outputFolder = 'dist'; /* Specify the output directory (relative to project root). */
-const assetFolder = 'assets'; /* Specify the assets folder */
-const main = pkg.main || 'index.html'; /* Which file watcher to open. */
-const pluginSettings = {
-  viteStaticCopy: { targets: [{ src: `${assetFolder}/static`, dest: assetFolder }] },
-  viteBanner: { outDir: outputFolder, content: banner },
-  createHtmlPlugin: { minify: true, filename: `${main}` },
-};
+const assetsFolder = 'assets'; /* Specify the assets folder */
 
 export default defineConfig({
-  root,
+  base: '/',
+  assetsInclude: assetsFolder,
   server: {
-    // Development
-    cors: true,
     open: true,
-    host: true
+    host: true,
   },
   build: {
-    // Production
     outDir: outputFolder,
-    assetsDir: assetFolder,
+    assetsDir: assetsFolder,
     assetsInlineLimit: 0,
-    target: 'modules',
-    open: `${outputFolder}/${main}`,
+    minify: 'terser',
     emptyOutDir: true,
-    sourcemap: false,
-    minify: true,
-    manifest: false,
-    reportCompressedSize: true,
     rollupOptions: {
       output: {
         dir: outputFolder,
         chunkFileNames: '[name].js',
         entryFileNames: '[name].js',
-        assetFileNames: ({ name }) => {
-          if (/\.css$/.test(name)) return `${assetFolder}/styles/[name][extname]`;
-          if (/\.(woff2?|ttf|otf)$/.test(name)) return `${assetFolder}/fonts/[name][extname]`;
-          if (/\\favicon\\/.test(name)) return `${assetFolder}/static/images/favicon/[name][extname]`;
-          if (/\.(png|jpe?g|svg)$/.test(name)) return `${assetFolder}/static/images/[name][extname]`;
+        assetFileNames: ({ name = '' }) => {
+          if (/\\favicon/.test(name)) return `${assetsFolder}/images/favicon/[name][extname]`;
+          if (/\.css/.test(name)) return `${assetsFolder}/styles/[name][extname]`;
+          if (/\.(woff2?|ttf|otf)$/.test(name)) return `${assetsFolder}/fonts/[name][extname]`;
+          if (/\.(png|jpe?g|svg)$/.test(name)) return `${assetsFolder}/images/[name][extname]`;
           return '[name][extname]';
         }
       }
     }
   },
   plugins: [
-    viteStaticCopy(pluginSettings.viteStaticCopy),
-    viteBanner(pluginSettings.viteBanner),
-    createHtmlPlugin(pluginSettings.createHtmlPlugin),
-  ],
+    viteStaticCopy({ targets: [{ src: `${assetsFolder}/images`, dest: assetsFolder }] }),
+    viteBanner({ outDir: outputFolder, content: banner }),
+    createHtmlPlugin({ minify: true }),
+  ]
 });
