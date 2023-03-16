@@ -7,7 +7,7 @@
   min-height: 100vh;
   padding: 0 20px;
 
-  background-image: url("/assets/images/invitation-bg.png");
+  background-image: url('/assets/images/invitation-bg.png');
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -73,7 +73,7 @@
   padding: 2rem 0 0;
 
   color: var(--clr-secondary);
-  font-family: "bridal";
+  font-family: 'bridal';
   font-weight: 900;
   font-size: 4.5em;
   line-height: 2em;
@@ -99,7 +99,7 @@
 
   background-color: #00000000;
   color: var(--clr-secondary);
-  font-family: "Calligraph";
+  font-family: 'Calligraph';
   font-size: 1em;
   text-align: center;
 

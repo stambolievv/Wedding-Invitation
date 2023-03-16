@@ -7,7 +7,7 @@
   max-width: 1460px;
   margin: 0 auto;
   padding: 48px 0;
-  
+
   color: var(--clr-text);
   text-align: center;
 }
@@ -17,7 +17,7 @@
 }
 
 #program h3 {
-  font-family: "Solena";
+  font-family: 'Solena';
   font-size: 2.5em;
 }
 
@@ -25,7 +25,7 @@
   width: 100%;
   margin: 0;
 
-  font-family: "Solena";
+  font-family: 'Solena';
   font-size: 4.5em;
   font-weight: 500;
 }
@@ -42,7 +42,7 @@
 
   padding: 12px 0;
 
-  font-family: "Eurof35";
+  font-family: 'Eurof35';
   font-size: 1.5em;
   font-style: italic;
 }
@@ -85,7 +85,7 @@
 #program .description {
   height: 100px;
 
-  font-family: "Eurof35";
+  font-family: 'Eurof35';
   font-weight: 700;
 }
 

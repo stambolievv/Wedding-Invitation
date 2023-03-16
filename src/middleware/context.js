@@ -1,7 +1,7 @@
 import { render } from 'lit-html';
 import page from 'page';
 
-const root = document.getElementById('main');
+const root = document.getElementById('main') || document.body;
 const baseUrl = import.meta.env.BASE_URL.slice(0, -1);
 
 page.base(baseUrl);
