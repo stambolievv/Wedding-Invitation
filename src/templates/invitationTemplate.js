@@ -3,7 +3,7 @@ import { html } from 'lit-html';
 export const invitation = (prop, path) => html`
   <section id="invitation">
     <nav>
-      <h1 class="heading">Димитрина <span>&</span> Иван</h1>
+      <h1 class="heading">Име <span>&</span> Друго име</h1>
       <ul class="menu">
         <li><a href="#program">Програма</a></li>
         <li><a href="#contacts">Контакти</a></li>
@@ -11,11 +11,11 @@ export const invitation = (prop, path) => html`
     </nav>
     <div class="invitation-content">
       <p>Някои казват: „Беше ви време.“,<br />Други пък: „ Имахте време.“</p>
-      <p>Всъщност има ли значение, щом взето е решение,<br />че дошло е време Иван булка да вземе. Нежно Дими я нарича и силно я обича.</p>
+      <p>Всъщност има ли значение, щом взето е решение,<br />че дошло е време Име булка да вземе. Нежно Име я нарича и силно я обича.</p>
       <p>И защото много се ОБИЧАТ, Те във вярност ще се ВРИЧАТ.</p>
-      <p>Скъпи ${prop}, Ние, Иван и Димитрина заедно с родителите ни, Ви каним да съучаствате в нашето сватбено тържество.<br />На 05 юни2022г. гр. Пловдив</p>
-      <p>Без много да умуват Дмитрий и Ксения Ще кумуват.</p>
-      <p>Ще очакваме вашите потвърждения до <strong>05.05.2022г</strong>.</p>
+      <p>Скъпи ${prop}, Ние, Име и Име заедно с родителите ни, Ви каним да съучаствате в нашето сватбено тържество.<br />На 01 юни 2023г. гр. Пловдив</p>
+      <p>Без много да умуват Име и Име ще кумуват.</p>
+      <p>Ще очакваме вашите потвърждения до <strong>01.01.2023г</strong>.</p>
     </div>
   </section>
   <section id="program">
@@ -62,8 +62,8 @@ export const invitation = (prop, path) => html`
       <div class="row">
         <div class="our-contacts">
           <h4>Нашите Контакти:</h4>
-          <div>Дими - 088 405 6084</div>
-          <div>Иван &nbsp; - 087 764 4291</div>
+          <div>Име - <span class="call" onclick="window.open('tel:+359888888888')">088 888 8888</span></div>
+          <div>Име - <span class="call" onclick="window.open('tel:+359888888888')">088 888 8888</span></div>
         </div>
         <div class="taxi-contacts"></div>
       </div>
@@ -74,12 +74,12 @@ export const invitation = (prop, path) => html`
             <a href="http://www.plovdivskamitropolia.bg/hramove/143-mitropolitski-hram-qsv-vlmch-marinaq-gr-plovdiv.html">Храм „Света Великомъченица Марина“</a>
           </h4>
           <div>гр.Пловдив ул."др Георги Валкович" №7</div>
-          <div>032 623 276</div>
+          <div>032 888 888</div>
         </div>
         <div class="complex">
           <h4><a href="https://www.facebook.com/weddingsgarde/">Комплекс „Garden Weddings“</a></h4>
           <div>гр.Пловдив Индустриален Парк Марково</div>
-          <div>089 900 0210</div>
+          <div>088 888 8888</div>
         </div>
       </div>
     </div>
