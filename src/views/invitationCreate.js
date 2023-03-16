@@ -5,7 +5,7 @@ import { invitation } from '../templates/invitationTemplate';
 
 /**
  * @description Renders a form for creating a new invitation to a recipient.
- * @param {object} ctx - The context object to use for rendering the form.
+ * @param {PageJS.Context} ctx - The context object to use for rendering the form.
  */
 export function createInvitation(ctx) {
   const template = invitation(html`<input @keydown=${onSubmit} class="recipient" type="text" name="recipient" />`);
